@@ -1,26 +1,19 @@
-function setup() {
-  createCanvas(innerWidth, 500);
-  colorMode (HSB)
-  rectMode (CENTER)
-  noStroke ()
-}
-
-function draw() {
-  const t = frameCount / 25
-  background(`pink`);
-  fill (`hotpink`)
-  
-  const total_squares = 10
-  const size = width / total_squares
-  
-  for (let row = 0; row < total_squares; row++) {
-  for (let col = 0; col < total_squares; col++) {
-      
-      const x = (col + 0.5) * size;
-      const y = (row + 0.5) * size;
-      
-    const squareSize = t * (row + col + 1) % size;
-      square(x, y, squareSize);
-    }
-  }
-}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>this is a second blog post!</h1>
+    <p>
+      This post is a homework assignment that demonstrates my attempts at
+      creating a grid of squares. The first thing I did was search on Google for
+      how to create a grid of squares in p5. The search results led me to a
+      YouTube tutorial that helped me understand the process. I then came across
+      some code in p5, which I copied into my existing code. However, this
+      caused an error due to the placement of the code.
+    </p>
+  </body>
+</html>
