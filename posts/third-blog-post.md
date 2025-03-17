@@ -17,21 +17,21 @@ What resources might help me to learn those concepts?
 
 the first person I spoke to was joolie, after I asked her those questions she replied with this.
 
-(![alt text](convo.png))
+![alt text](convo.png)
 
 and then this
 
-(![alt text](convo2.png))
+![alt text](convo2.png)
 ...
 The second person I spoke to was Travv.
 
-(![alt text](<travv intro.png>))
+![alt text](<travv intro.png>)
 ![alt text](<travv convo 2.png>)
-(![alt text](<travv convo 1-1.png>))
+![alt text](<travv convo 1-1.png>)
 
 The third person was Lanchu Zheng
-(![alt text](<lanchu convo 1.png>))
-(![alt text](<lanchu convo 2.png>))
-(![alt text](<lanchu convo 3.png>))
-(![alt text](<lanchu convo 4.png>))
+![alt text](<lanchu convo 1.png>)
+![alt text](<lanchu convo 2.png>)
+![alt text](<lanchu convo 3.png>)
+![alt text](<lanchu convo 4.png>)
 ...

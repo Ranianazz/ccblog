@@ -1,5 +1,5 @@
 ---
-title: This is a blog post!
+title: This is blog post 2!
 published_at: 2022-11-04
 snippet: An example of a blog post.
 disable_html_sanitization: true
@@ -25,10 +25,10 @@ I utilized chatGPT to find a code that generated this image.
 
 <iframe src="https://editor.p5js.org/Ranianazz/full/sy96UEP2Z"></iframe>
 
-# final gride created with Thoma's grid code. 
+# final gride created with Thoma's grid code.
+
 <iframe src="https://editor.p5js.org/Ranianazz/full/tncd0ztq-"></iframe>
 
-This gride was achieved by adding const t = frameCount / 25; which is a Time-based variable for animation and 
- 
+This gride was achieved by adding const t = frameCount / 25; which is a Time-based variable for animation and
 
 The end...
