@@ -24,6 +24,6 @@ Our shared challenge are the struggle of holding onto our deen and cultural iden
 
 # p5 sketches that explains my idea.
 
-<iframe src="https://editor.p5js.org/Ranianazz/full/IGfhvzqTp"></iframe>
+<iframe src="https://editor.p5js.org/Ranianazz/full/ITZshPPGh"></iframe>
 
-My kindred spirit has a deep connection to Islam. I chose stars that appear to sparkle to symbolize hope during dark times and to reflect their significance in Islamic culture. To create this sketch, I used ChatGPT to help me find relevant code. Initially, there was no animation, so I incorporated a for loop and random into the code. I also altered the color, size, and frame rate of the sketch to achieve the desired animation effect.
+My kindred spirit has a deep connection to Islam. I chose red stars that rotate to symbolize hope for palestine during dark times and to reflect their significance in Islamic culture. To create this sketch, I used ChatGPT to help me find relevant code. Initially, there was no animation, so I incorporated a for loop and random into the code. I also altered the color, size, and frame rate of the sketch to achieve the desired animation effect.
