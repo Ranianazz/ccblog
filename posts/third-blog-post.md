@@ -13,7 +13,7 @@ What do you think is going on, under the hood?
 What concepts would I need to understand in order to replicate this work in p5?
 What resources might help me to learn those concepts?
 
-(![alt text](intro1.png))
+(![alt text](../static/intro-joolie.png))
 
 the first person I spoke to was joolie, after I asked her those questions she replied with this.
 

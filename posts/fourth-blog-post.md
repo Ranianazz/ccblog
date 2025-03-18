@@ -1,5 +1,5 @@
 ---
-title: This is a blog post!
+title: This is blog post 4!
 published_at: 2022-11-04
 snippet: An example of a blog post.
 disable_html_sanitization: true
@@ -24,6 +24,14 @@ Our shared challenge are the struggle of holding onto our deen and cultural iden
 
 # p5 sketches that explains my idea.
 
-<iframe src="https://editor.p5js.org/Ranianazz/full/ITZshPPGh"></iframe>
+<iframe id="sketch" src="https://editor.p5js.org/Ranianazz/full/prC5bfPz1"></iframe>
+
+<script type="module">
+
+    const iframe  = document.getElementById ("sketch")
+    iframe.width  = iframe.parentNode.scrollWidth
+    iframe.height = iframe.width * 9 / 16 + 42
+
+</script>
 
 My kindred spirit has a deep connection to Islam. I chose red stars that rotate to symbolize hope for Palestine during dark times and to reflect their significance in Islamic culture. To add even more depth, there is a hidden word, "Allah," beneath the moon, which is only revealed once you click on it. To create this sketch, I utilized ChatGPT to help me develop the relevant code. ChatGPT added the interactive function, and initially, there was no animation. To enhance it, I incorporated a for loop and random elements into the code with ChatGPT’s assistance. Additionally, I adjusted the color, size, and frame rate of the sketch to achieve the desired animation effect.
