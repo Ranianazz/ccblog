@@ -35,3 +35,6 @@ Our shared challenge are the struggle of holding onto our deen and cultural iden
 </script>
 
 My kindred spirit has a deep connection to Islam. I chose red stars that rotate to symbolize hope for Palestine during dark times and to reflect their significance in Islamic culture. To add even more depth, there is a hidden word, "Allah," beneath the moon, which is only revealed once you click on it. To create this sketch, I utilized ChatGPT to help me develop the relevant code. ChatGPT added the interactive function, and initially, there was no animation. To enhance it, I incorporated a for loop and random elements into the code with ChatGPT’s assistance. Additionally, I adjusted the color, size, and frame rate of the sketch to achieve the desired animation effect.
+
+the end
+...

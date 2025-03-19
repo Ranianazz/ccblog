@@ -16,19 +16,45 @@ Later, I asked Thomas for further guidance to help me understand JavaScript bett
 
 For now, the two examples shown below are the completed homework tasks assigned to my class.
 
-<iframe src="https://editor.p5js.org/Ranianazz/full/2Lq-VjJKk"></iframe>
+<iframe id="grid" src="https://editor.p5js.org/Ranianazz/full/2Lq-VjJKk"></iframe>
+
+<script type="module">
+
+    const iframe  = document.getElementById ("grid")
+    iframe.width  = iframe.parentNode.scrollWidth
+    iframe.height = iframe.width * 9 / 16 + 42
+
+</script>
+
 grid completed in class with thomas.
 
 # chatGPT generaded grid
 
 I utilized chatGPT to find a code that generated this image.
 
-<iframe src="https://editor.p5js.org/Ranianazz/full/sy96UEP2Z"></iframe>
+<iframe id="grid2" src="https://editor.p5js.org/Ranianazz/full/sy96UEP2Z"></iframe>
 
-# final gride created with Thoma's grid code.
+<script type="module">
 
-<iframe src="https://editor.p5js.org/Ranianazz/full/tncd0ztq-"></iframe>
+    const iframe  = document.getElementById ("grid2")
+    iframe.width  = iframe.parentNode.scrollWidth
+    iframe.height = iframe.width * 9 / 16 + 42
 
-This gride was achieved by adding const t = frameCount / 25; which is a Time-based variable for animation and
+</script>
 
-The end...
+# final grid created with Thoma's grid code.
+
+<iframe id="grid3" src="https://editor.p5js.org/Ranianazz/full/tncd0ztq-"></iframe>
+
+<script type="module">
+
+    const iframe  = document.getElementById ("grid3")
+    iframe.width  = iframe.parentNode.scrollWidth
+    iframe.height = iframe.width * 9 / 16 + 42
+
+</script>
+
+The grid effect is achieved by setting a frame rate of 10 and applying random offsets to the x and y positions of each square, creating a jittery motion.
+
+The end
+...
