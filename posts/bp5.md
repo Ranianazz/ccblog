@@ -1,6 +1,6 @@
 ---
 title: week 5
-published_at: 2022-11-04
+published_at: 2025-03-25
 snippet: Explaining how I will achieve a cute asthetic.
 disable_html_sanitization: true
 allow_math: true

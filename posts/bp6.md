@@ -1,6 +1,6 @@
 ---
 title: Week 6
-published_at: 2022-11-04
+published_at: 2025-03-27
 snippet: My cute sketch!
 disable_html_sanitization: true
 allow_math: true

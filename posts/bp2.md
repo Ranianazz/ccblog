@@ -1,6 +1,6 @@
 ---
 title: Week 2
-published_at: 2022-11-04
+published_at: 2025-03-11
 snippet: Creating a grid of squares in P5.js.
 disable_html_sanitization: true
 allow_math: true
