@@ -1,12 +1,12 @@
 ---
-title: This is blog post 2!
+title: Week 2
 published_at: 2022-11-04
-snippet: An example of a blog post.
+snippet: Creating a grid of squares in P5.js.
 disable_html_sanitization: true
 allow_math: true
 ---
 
-# This is a second blog post!
+# Homwork task 1
 
 This post is a homework assignment that showcases my attempts at creating a grid of squares. First, I searched Google for guidance on how to create a grid of squares in p5.js. The search results led me to a YouTube tutorial that helped me understand the process.
 

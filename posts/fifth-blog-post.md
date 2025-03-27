@@ -1,14 +1,12 @@
 ---
-title: This is blog post 5!
+title: week 5
 published_at: 2022-11-04
-snippet: explaining how I will achieve a cute asthetic.
+snippet: Explaining how I will achieve a cute asthetic.
 disable_html_sanitization: true
 allow_math: true
 ---
 
-# blog post 5!
-
-# how did Rafael Rozendaal achive a cute aethtic register?
+# How did Rafael Rozendaal achive a cute aethtic register?
 
 Refael incorporates geometric shapes in many of his artworks. He uses soft, bright pastel colors and rounded forms to create a visually appealing, cute aesthetic. By slowing down the speed of some of the artworks, he achieves a softer atmosphere that conveys a sense of cuteness.
 
@@ -24,4 +22,10 @@ To further engage my viewers and enhance the cute aesthetic, I will include the 
 
 For interactivity, I will implement a bounce function that allows my adorable Pikachu cat to giggle and bounce around the screen.
 
-# feedback from classmates
+# Feedback from classmates
+
+![alt text](feedback-travv.png)
+
+![alt text](feedback-joolie.png)
+
+...
