@@ -1,5 +1,5 @@
 ---
-title: Week 6
+title: Week 3b
 published_at: 2025-03-27
 snippet: My cute sketch!
 disable_html_sanitization: true
@@ -64,6 +64,10 @@ Processing Foundation. (n.d.). Running a local server. GitHub. Retrieved from ht
 
 Shiffman, D. (n.d.). Creative coding: Media. Retrieved from https://creative-coding.decontextualize.com/media/
 
-Chatgpt.
+p5.js. (n.d.). p5: Object. p5.js. https://p5js.org/reference/p5/Object/
+
+OpenAI. (2023). ChatGPT (Mar 14 version) [Large language model]. https://chat.openai.com/
 
 Pixabay. (n.d.). Bubble sound effects. Retrieved from https://pixabay.com/sound-effects/search/bubble/
+
+p5.js. (n.d.). Image: Background image. The p5.js Web Editor. https://editor.p5js.org/p5/sketches/Image:_Background_Image

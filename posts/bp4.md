@@ -1,5 +1,5 @@
 ---
-title: Week 4
+title: Week 2b
 published_at: 2025-03-20
 snippet: My kindered spirit!
 disable_html_sanitization: true

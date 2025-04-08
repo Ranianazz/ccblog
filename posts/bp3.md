@@ -1,5 +1,5 @@
 ---
-title: Week 3
+title: Week 2a
 published_at: 2025-03-18
 snippet: Class discussions about Rafeal Rozendaal artwork 'missing'
 disable_html_sanitization: true

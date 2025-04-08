@@ -1,5 +1,5 @@
 ---
-title: Week 2
+title: Week 1b
 published_at: 2025-03-11
 snippet: Creating a grid of squares in P5.js.
 disable_html_sanitization: true

@@ -1,5 +1,5 @@
 ---
-title: week 5
+title: week 3a
 published_at: 2025-03-25
 snippet: Explaining how I will achieve a cute asthetic.
 disable_html_sanitization: true
