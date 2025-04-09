@@ -1,255 +1,116 @@
 ---
-title: Week 6a
-published_at: 2025-04-08
-snippet: experimenting with 3D .js
+title: p5.js
+published_at: 2025-04-03
+snippet: Week 4b
 disable_html_sanitization: true
 allow_math: true
 ---
 
-<div id="three.js_container"></div>
+<script src="./scripts/p5.js"></script>
 
-<!-- <script type="module">
-    import * as THREE from "/250408/build/three.module.js"
-    console.log (THREE)
-    const container = document.getElementById ('three.js_container')
-    const width = container.parentNode.scrollWidth
-    const height = width * 9/16
+<canvas id="p5_example"></canvas>
 
-</script> -->
+<script>
+    const cnv = document.getElementById ("p5_example")
+    const w = cnv.parentNode.scrollWidth
+    const h = w * 9 / 16
 
-<script type="importmap">
-    {
-        "imports": {
-            "three": "/250408/build/three.module.js",
-            "three/Jsm/": "./jsm/"
-        }
-    }
+
+    // declaring a variable and assigning to it, an empty object
+const faller  = {}
+
+// declaring a variable and assigning to it, an empty array
+const fallers = []
+let bg
+
+function setup() {
+ createCanvas (w, h, P2D, cnv)//this is to make it fullscreen
+  noStroke ()// to ensure there is no stroke
+  colorMode (HSB)//enableing different colours
+   // Assigning an array of two randomly generated colors to the faller object.
+  faller.colours = [ rand_col (), rand_col () ]
+  // Defining starting points for the animation, where elements will begin falling from.
+  faller.start_points = [
+    { x: 0, y: height / 2 },
+    { x: 0, y: 0 },
+    { x: width / 4, y: 0 },
+    { x: width / 2, y: 0 },
+    { x: width * 3 / 4, y: 0 },
+    { x: width, y: 0 },
+    { x: width, y: height / 2 },
+  ]
+  faller.end_points = []// Empty array to store end points for faller animation.
+  for (let i = 1; i < 8; i++) {// Looping 7 times to define end points where falling motion will stop.
+    faller.end_points.push ({
+      x: i * width / 8,// End X positions evenly spaced across the width.
+      y: height// End Y positions always at the bottom of the screen.
+    })
+  }  // Creating an array of 7 randomly generated curve values for animation smoothness.
+  faller.curves = new Array (7).fill ().map (rand_curve)
+  faller.phase  = 0 // Initializing phase to 0, which will be used to control animation progression.
+    // Creating a copy of the faller object and adding it to the fallers array.
+  fallers.push (Object.assign ({}, faller))
+    // Assign a random color to the background.
+  bg = rand_col ()
+}
+
+function draw() {
+   // Set the background color.
+  background (bg)
+   // Every 40 frames, create a new faller and update background color.
+  if (frameCount % 40 == 0) {
+    const new_faller = Object.assign ({}, faller)
+    new_faller.colours = [ bg, rand_col () ] // The new faller gets a new color combination.
+    new_faller.curves = new Array (7).fill ().map (rand_curve) // Generate new curves for smooth animation variation.
+    // Reverse the fallers array, add the new faller, and reverse back.
+    fallers.reverse ()
+    fallers.push (new_faller)
+    fallers.reverse ()
+    bg = rand_col () // Assign a new random background color.
+  }
+  
+  const redundant = [] // Array to store indices of fallers that have finished their animation.
+  
+  fallers.forEach ((f, i) => {// Iterate through each faller in the fallers array.
+    colorMode (RGB)// Switch to RGB mode for color interpolation.
+    fill (lerpColor (f.colours[0], f.colours[1], f.phase)) // Set the fill color by blending between the two colors based on phase progression.
+    beginShape ()  // Begin drawing the shape.
+    vertex (0, height) // Start at the bottom-left corner of the canvas.
+      // Loop through each start point and calculate its position using phase.
+    f.start_points.forEach ((s, i) => {
+      const p = find_point (s, f.end_points[i], f.phase ** f.curves[i])
+      vertex (p.x, p.y)
+    })  // End at the bottom-right corner of the canvas.
+    vertex (width, height)
+    endShape ()
+    f.phase += 0.008
+    if (f.phase > 1) redundant.push (i)
+  })
+  //unsure
+  redundant.forEach (n => fallers.splice (n, 1))
+  
+}
+//function for the start and end points based on the phase
+function find_point (start, end, phase) {
+  const delt = {
+    x: end.x - start.x,//calculating the x distance
+    y: end.y - start.y//calculating the y distance
+  } // Calculate new position based on phase.
+  const x = start.x + delt.x * phase
+  const y = start.y + delt.y * phase
+  return { x, y }
+}
+
+// Function to generate a random color in HSB mode.
+function rand_col () {
+  colorMode (HSB)
+  const h = floor (random () * 360)// Random hue between 0 and 360.
+  return color (h, 100, 100)
+}
+// Function to generate a random curve value to control animation smoothness.
+function rand_curve () {
+  return random () * 2 + 1// Returns a random value between 1 and 3.
+}
 </script>
 
-<script type="module">
-
-    import * as THREE from 'three';
-    import Stats from '/250408/jsm/libs/stats.module.js';
-    import { GUI } from '/250408/jsm/libs/lil-gui.module.min.js';
-
-    import { GLTFLoader } from '/250408/jsm/loaders/GLTFLoader.js';
-
-    let container, stats, clock, gui, mixer, actions, activeAction, previousAction;
-    let camera, scene, renderer, model, face;
-
-    const api = { state: 'Walking' };
-
-    init();
-
-    function init() {
-
-        //container = document.createElement( 'div' );
-        const container = document.getElementById ('three.js_container')
-        const width = container.parentNode.scrollWidth
-        const height = width * 9/16
-        document.body.appendChild( container );
-
-        // const canvasWidth = width;
-        // const canvasHeight = height;
-
-        // camera = new THREE.PerspectiveCamera( 45, width / height, 0.25, 100 );
-        camera = new THREE.PerspectiveCamera( 45, width / height, 0.25, 100 );
-
-        camera.position.set( - 5, 3, 10 );
-        camera.lookAt( 0, 2, 0 );
-
-        scene = new THREE.Scene();
-        scene.background = new THREE.Color( 0xffffff );
-        scene.fog = new THREE.Fog( 0xffffff, 20, 100 );
-
-        clock = new THREE.Clock();
-
-        // lights
-
-        const hemiLight = new THREE.HemisphereLight( 0xffffff, 0x8d8d8d, 3 );
-        hemiLight.position.set( 0, 20, 0 );
-        scene.add( hemiLight );
-
-        const dirLight = new THREE.DirectionalLight( 0xffffff, 3 );
-        dirLight.position.set( 0, 20, 10 );
-        scene.add( dirLight );
-
-        // ground
-
-        const mesh = new THREE.Mesh( new THREE.PlaneGeometry( 2000, 2000 ), new THREE.MeshPhongMaterial( { color: 0xcbcbcb, depthWrite: false } ) );
-        mesh.rotation.x = - Math.PI / 2;
-        scene.add( mesh );
-
-        const grid = new THREE.GridHelper( 200, 40, 0x000000, 0x000000 );
-        grid.material.opacity = 0.0;
-        grid.material.transparent = true;
-        scene.add( grid );
-
-        // model
-
-        const loader = new GLTFLoader();
-        loader.load( '/250408/models/gltf/RobotExpressive/RobotExpressive.glb', function ( gltf ) {
-
-            model = gltf.scene;
-            scene.add( model );
-
-            createGUI( model, gltf.animations );
-
-        }, undefined, function ( e ) {
-
-            console.error( e );
-
-        } );
-
-        renderer = new THREE.WebGLRenderer( { antialias: true } );
-        renderer.setPixelRatio( window.devicePixelRatio );
-        renderer.setSize( window.innerWidth, window.innerHeight );
-        renderer.setAnimationLoop( animate );
-        container.appendChild( renderer.domElement );
-
-        window.addEventListener( 'resize', onWindowResize );
-
-        // stats
-        stats = new Stats();
-        container.appendChild( stats.dom );
-
-    }
-
-    function createGUI( model, animations ) {
-
-        const states = [ 'Idle', 'Walking', 'Running', 'Dance', 'Death', 'Sitting', 'Standing' ];
-        const emotes = [ 'Jump', 'Yes', 'No', 'Wave', 'Punch', 'ThumbsUp' ];
-
-        gui = new GUI();
-
-        mixer = new THREE.AnimationMixer( model );
-
-        actions = {};
-
-        for ( let i = 0; i < animations.length; i ++ ) {
-
-            const clip = animations[ i ];
-            const action = mixer.clipAction( clip );
-            actions[ clip.name ] = action;
-
-            if ( emotes.indexOf( clip.name ) >= 0 || states.indexOf( clip.name ) >= 4 ) {
-
-                action.clampWhenFinished = true;
-                action.loop = THREE.LoopOnce;
-
-            }
-
-        }
-
-        // states
-
-        const statesFolder = gui.addFolder( 'States' );
-
-        const clipCtrl = statesFolder.add( api, 'state' ).options( states );
-
-        clipCtrl.onChange( function () {
-
-            fadeToAction( api.state, 0.5 );
-
-        } );
-
-        statesFolder.open();
-
-        // emotes
-
-        const emoteFolder = gui.addFolder( 'Emotes' );
-
-        function createEmoteCallback( name ) {
-
-            api[ name ] = function () {
-
-                fadeToAction( name, 0.2 );
-
-                mixer.addEventListener( 'finished', restoreState );
-
-            };
-
-            emoteFolder.add( api, name );
-
-        }
-
-        function restoreState() {
-
-            mixer.removeEventListener( 'finished', restoreState );
-
-            fadeToAction( api.state, 0.2 );
-
-        }
-
-        for ( let i = 0; i < emotes.length; i ++ ) {
-
-            createEmoteCallback( emotes[ i ] );
-
-        }
-
-        emoteFolder.open();
-
-        // expressions
-
-        face = model.getObjectByName( 'Head_4' );
-
-        const expressions = Object.keys( face.morphTargetDictionary );
-        const expressionFolder = gui.addFolder( 'Expressions' );
-
-        for ( let i = 0; i < expressions.length; i ++ ) {
-
-            expressionFolder.add( face.morphTargetInfluences, i, 0, 1, 0.01 ).name( expressions[ i ] );
-
-        }
-
-        activeAction = actions[ 'Walking' ];
-        activeAction.play();
-
-        expressionFolder.open();
-
-    }
-
-    function fadeToAction( name, duration ) {
-
-        previousAction = activeAction;
-        activeAction = actions[ name ];
-
-        if ( previousAction !== activeAction ) {
-
-            previousAction.fadeOut( duration );
-
-        }
-
-        activeAction
-            .reset()
-            .setEffectiveTimeScale( 1 )
-            .setEffectiveWeight( 1 )
-            .fadeIn( duration )
-            .play();
-
-    }
-
-    function onWindowResize() {
-
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-
-        renderer.setSize( window.innerWidth, window.innerHeight );
-
-    }
-
-    //
-
-    function animate() {
-
-        const dt = clock.getDelta();
-
-        if ( mixer ) mixer.update( dt );
-
-        renderer.render( scene, camera );
-
-        stats.update();
-
-    }
-
-</script>
+<div style="height: 100px;"></div>

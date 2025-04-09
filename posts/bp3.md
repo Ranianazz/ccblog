@@ -1,7 +1,7 @@
 ---
-title: Week 2a
-published_at: 2025-03-18
-snippet: Class discussions about Rafeal Rozendaal artwork 'missing'
+title: What is creative coding?
+published_at: 2025-03-13
+snippet: Week 1 B
 disable_html_sanitization: true
 allow_math: true
 ---
@@ -33,4 +33,5 @@ What resources might help me to learn those concepts?
 ![alt text](<lanchu convo 2.png>)
 ![alt text](<lanchu convo 3.png>)
 ![alt text](<lanchu convo 4.png>)
-...
+
+<div style="height: 100px;"></div>

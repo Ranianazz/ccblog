@@ -1,73 +1,31 @@
 ---
-title: Week 3b
-published_at: 2025-03-27
-snippet: My cute sketch!
+title: Explaining how I will achieve a cute asthetic
+published_at: 2025-03-25
+snippet: week 3a
 disable_html_sanitization: true
 allow_math: true
 ---
 
-# P5.js sketch an offering for my kindred spirit
+# How did Rafael Rozendaal achive a cute aethtic register?
 
-Click for sound! have fun and create more bubbles.
+Refael incorporates geometric shapes in many of his artworks. He uses soft, bright pastel colors and rounded forms to create a visually appealing, cute aesthetic. By slowing down the speed of some of the artworks, he achieves a softer atmosphere that conveys a sense of cuteness.
 
-<iframe id="sketch" src="https://editor.p5js.org/Ranianazz/full/YZT9VN_IB"></iframe>
+In terms of sound, most of his cute artworks are silent. From my perspective, pieces like "Clash," "Non-Either," "Float," "Bounce," and "Fill This Up" lack a sonic aesthetic.
 
-<script type="module">
+Nonetheless, the interactivity of his work is enjoyable and playful, contributing to the overall cute aesthetic, as cute elements are often fun and engaging.
 
-    const iframe  = document.getElementById ("sketch")
-    iframe.width  = iframe.parentNode.scrollWidth
-    iframe.height = iframe.width * 9 / 16 + 42
+# How I will achieve a cute aesthetic register.
 
-</script>
+To create a visually appealing aesthetic, I plan to use round shapes to design a cat that incorporates Pikachu's signature yellow colour along with red checks, resulting in an incredibly cute image.
 
-# Visuals, Sound & Interaction in My Sketch.
+To further engage my viewers and enhance the cute aesthetic, I will include the sound of children's laughter.
 
-My visual aesthetic was inspired by capturing my kindred spirit's childhood memories, as we both used to play Pokémon when it was just a card game. I utilized a bright colour scheme to highlight Pikachu's iconic colours, emphasizing his adorable nature, and I incorporated this into a cat design. Thus, I created "Pikachu Cat," merging the two cutest creations in the world. I placed Pikachu Cat inside a rainbow bubble to add a playful element to the sketch.
+For interactivity, I will implement a bounce function that allows my adorable Pikachu cat to giggle and bounce around the screen.
 
-This inspired the audio component, as I thought it would be fitting to use the sound of a bubble popping, given that Pikachu Cat is in a bubble.
+# Feedback from classmates
 
-Additionally, I decided to add more bubbles that bounce around the screen, creating a mesmerizing and fun little game for my kindred spirit to enjoy along with the sketch.
+![alt text](feedback-travv.png)
 
-# How My Sketch Uses Core Coding Concepts.
+![alt text](feedback-joolie.png)
 
-The purpose of the variables in my sketch is to store and manage data that changes during program execution. I utilized these variables for the background image, the Pikachu cat image, the sound effect, and an array of circles. These are global variables declared at the top of the sketch.
-
-To achieve the cute aesthetic of my sketch, I used several functions: `preload()` to load images, `setup()` to create the canvas and place the initial circle, `draw()` to update and render the circles, and `mousePressed()` to create new circles whenever the mouse is clicked. Additionally, I created functions like `addCircle()`, `updateCircle()`, and `drawCircle()` to manage the circles. The `playBounceSound()` function plays the bounce sound when necessary.
-
-Interactions in the sketch are facilitated by a for loop within the `draw()` function, which iterates through all the circles in the circles array to update and draw each one.
-
-I employed boolean logic to check if the sound is ready to play, which I achieved using the expression `if (popSound.isLoaded())` in the `playBounceSound()` function.
-
-In my cute p5.js sketch, I used the circles array to store all the circle objects created. I utilized the `push` method to add new circles to this array, which is accessed and modified throughout the program's execution.
-
-Since my sketch did not require a class, I did not use any for this project.
-
-# Feedback
-
-![alt text](joolie-feedback.png)
-
-# Refrences
-
-Coding Train. (n.d.). Collision detection. p5.js Web Editor. Retrieved from https://editor.p5js.org/codingtrain/sketches/7RN7GFD-Y
-
-Mozilla Developer Network. (n.d.). JavaScript guide: Working with objects. Retrieved from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
-
-Mozilla Developer Network. (n.d.). JavaScript reference: Array. Retrieved from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
-
-Processing Foundation. (n.d.). p5.js reference. Retrieved from https://p5js.org/reference/
-
-Processing Foundation. (n.d.). Getting started with p5.js. Retrieved from https://p5js.org/get-started/
-
-Processing Foundation. (n.d.). p5.js examples. Retrieved from https://p5js.org/examples/
-
-Processing Foundation. (n.d.). Running a local server. GitHub. Retrieved from https://github.com/processing/p5.js/wiki/Local-server
-
-Shiffman, D. (n.d.). Creative coding: Media. Retrieved from https://creative-coding.decontextualize.com/media/
-
-p5.js. (n.d.). p5: Object. p5.js. https://p5js.org/reference/p5/Object/
-
-OpenAI. (2023). ChatGPT (Mar 14 version) [Large language model]. https://chat.openai.com/
-
-Pixabay. (n.d.). Bubble sound effects. Retrieved from https://pixabay.com/sound-effects/search/bubble/
-
-p5.js. (n.d.). Image: Background image. The p5.js Web Editor. https://editor.p5js.org/p5/sketches/Image:_Background_Image
+<div style="height: 100px;"></div>

@@ -1,7 +1,7 @@
 ---
-title: Week 1b
+title: Intro to creative coding.
 published_at: 2025-03-11
-snippet: Creating a grid of squares in P5.js.
+snippet: Week 1 A
 disable_html_sanitization: true
 allow_math: true
 ---
@@ -57,4 +57,5 @@ I utilized chatGPT to find a code that generated this image.
 The grid effect is achieved by setting a frame rate of 10 and applying random offsets to the x and y positions of each square, creating a jittery motion.
 
 The end
-...
+
+<div style="height: 100px;"></div>
