@@ -264,4 +264,8 @@ When working with three.js to import 3D models in a Deno environment, we encount
 
 </script>
 
+For my class project, I chose a 3D robot model to work with, opting for it over the popular teapot model that most of my classmates selected. I found the robot to be quite charming. With the support of my peers and Thomas, I successfully uploaded the model, but I noticed that the original grid background remained and the model was too large for my needs. To fix this, I changed the background to white using the color `0xffffff` and resized the model accordingly.
+
+Additionally, I revamped the code to wrap the 3D canvas in a styled `<div>`, ensuring it maintained a fixed aspect ratio of 16:9. I set a maximum width, centered the content, and added padding, a border, and a subtle box shadow to enhance its appearance. By utilizing the `loader.load()` functions, I was able to center the model within the scene. I also made edits to the `init()` function to size the render according to the container. These adjustments helped the canvas stand out visually from the surrounding text and ensured it was well-integrated into the overall content layout.
+
 <div style="height: 100px;"></div>
