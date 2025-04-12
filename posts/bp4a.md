@@ -48,4 +48,8 @@ I utilised another step-by-step tutorial to create this low-compressible sketch.
 
 In my opinion, Philip Galanter’s article suggests that generative art is any art created using a system that operates autonomously. His notion that “structure is subjective and remains in the eye of the beholder” indicates that generative art can be broad enough to encompass both past and future expressions. It can serve as a subset of all art, adapting as artistic practices evolve over time. This perspective is useful because it allows for a wide range of interpretations and evolving forms within generative art.
 
+# SABATO VISCONTI
+
+In the artwork “Renders in the Time of COVID-19,” Sabato Visconti explores the intersection of digital glitch aesthetics and generative art. He combines structured elements with randomness to create a sense of Effective Complexity. The images rotate in a perfect circular motion, conveying stability and predictability. However, Visconti introduces randomness through varied colours and textures, making the visual effects seem unpredictable. The glitch effects further disrupt the images, adding a layer of chaos to the overall visual experience. The geometric contrasts between the rotation and the colours and textures result in high Effective Complexity. This piece is neither fully ordered nor completely chaotic, making it engaging and open to multiple interpretations.
+
 <div style="height: 100px;"></div>
