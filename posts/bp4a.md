@@ -42,8 +42,10 @@ I followed a step-by-step Coding Train tutorial to create this sketch. I conside
 
 </script>
 
-I utilised another step-by-step tutorial to create this low compressible sketch.The sketch uses Perlin noise to smoothly move a circle across the screen. I’d say it has low compressibility because the output is predictable and simple—there’s structure, but little surprise or complexity.
+I utilised another step-by-step tutorial to create this low-compressible sketch. The sketch uses Perlin noise to smoothly move a circle across the screen. I’d say it has low compressibility because it utilises noise to create an output that is predictable and simple—there’s structure, but little surprise or complexity.
 
 # Philip Galanter perspective on genereative art
 
 In my opinion, Philip Galanter’s article suggests that generative art is any art created using a system that operates autonomously. His notion that “structure is subjective and remains in the eye of the beholder” indicates that generative art can be broad enough to encompass both past and future expressions. It can serve as a subset of all art, adapting as artistic practices evolve over time. This perspective is useful because it allows for a wide range of interpretations and evolving forms within generative art.
+
+<div style="height: 100px;"></div>
