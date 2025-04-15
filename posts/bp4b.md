@@ -179,4 +179,18 @@ allow_math: true
 
 ```
 
+# How rendering my likeness affect its aesthetic register
+
+Rendering my likeness in this way shifted my aesthetic perspective, presenting an altered version of myself. This concept of an altered identity connects with Holloway's exploration of digital skins: “Through these images, the artist establishes a micro-archive of her own cosmic corporeality; the varied faces of Blackness and queerness are mediated by the digital skin of Holloway’s changeable avatars” (Holloway, 2020, p. 113). In the digital world, one can experiment with identity, embracing the range of possibilities that glitches can offer, similar to how Holloway uses avatars to shift between different selves.
+
+Additionally, Cary Wolfe states, “That is, after all, what is so compelling about these works: not that they are ‘a self-portrait of a face,’ but that something deep and maybe unprecedented in the history of art is going on in the transaction between paint as a medium for art and the decomposition of what Foucault called ‘something on the order of a subject’ under the force of extreme artistic scrutiny” (Wolfe, 2021). In the context of a glitch, the disruption of the image alters the history of the artwork while also changing the reality of one’s identity.
+
+This brings us to the concept of effective complexity. It refers to the balance between order and randomness in a system, essentially, how much meaningful structure something possesses without being completely chaotic or overly simplistic.
+
+Ngai’s aesthetic registers
+
+Cute: utilises softening agency, inviting affection,
+Zany: utilises deepfake artifacts or AI hallucinations
+Interesting: using Twitter bots to reconstruct your face from text sits in the interesting, provoking detached curiosity about identities.
+
 <div style="height: 100px;"></div>

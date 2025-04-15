@@ -8,156 +8,158 @@ allow_math: true
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>three.js webgl - effects - anaglyph</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<link type="text/css" rel="stylesheet" href="main.css">
-	</head>
-	<body>
-		<div id="info">
-			<a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> - effects - anaglyph<br/>
-			skybox by <a href="https://www.pauldebevec.com/" target="_blank" rel="noopener">Paul Debevec</a>
-		</div>
+<head>
+  <title>three.js webgl - morph targets - horse</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+  <link type="text/css" rel="stylesheet" href="main.css" />
+  <style>
+    body {
+      background-color: #f0f0f0;
+      color: #444;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 2rem;
+    }
 
-<script type="importmap">
-{
-    "imports": {
-	"three": "../build/three.module.js",
-	"three/addons/": "./jsm/"
-	}
-}
-		</script>
+    a {
+    color: #08f;
+    }
 
-<script type="module">
+    #info {
+    text-align: center;
+    margin-bottom: 1rem;
+    }
 
-			import * as THREE from 'three';
+    /* 16:9 container with max-width, centered */
+    #threejs-container {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 16 / 9; /* Maintains 16:9 ratio */
+    }
 
-			import { AnaglyphEffect } from 'three/addons/effects/AnaglyphEffect.js';
+    canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+    }
 
-			let container, camera, scene, renderer, effect;
+  </style>
+</head>
+<body>
 
-			const spheres = [];
+  <div id="info">
+    <a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> webgl - morph targets - horse<br />
+    model by <a href="https://mirada.com/" target="_blank" rel="noopener">mirada</a> from <a href="http://www.ro.me" target="_blank" rel="noopener">rome</a>
+  </div>
 
-			let mouseX = 0;
-			let mouseY = 0;
+  <!-- Styled container with 16:9 aspect ratio -->
+  <div id="threejs-container"></div>
 
-			let windowHalfX = window.innerWidth / 2;
-			let windowHalfY = window.innerHeight / 2;
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "/250408/build/three.module.js",
+        "three/Jsm/": "./jsm/"
+      }
+    }
+  </script>
 
-			document.addEventListener( 'mousemove', onDocumentMouseMove );
+  <script type="module">
+    import * as THREE from 'three';
+    import Stats from '/250408/jsm/libs/stats.module.js';
+    import { GLTFLoader } from '/250408/jsm/loaders/GLTFLoader.js';
 
-			init();
+    let container, stats;
+    let camera, scene, renderer;
+    let mesh, mixer;
 
-			function init() {
+    const radius = 600;
+    let theta = 0;
+    let prevTime = Date.now();
 
-				container = document.createElement( 'div' );
-				document.body.appendChild( container );
+    init();
 
-				camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 0.01, 100 );
-				camera.position.z = 3;
+    function init() {
+      container = document.getElementById('threejs-container');
 
-				const path = 'textures/cube/pisa/';
-				const format = '.png';
-				const urls = [
-					path + 'px' + format, path + 'nx' + format,
-					path + 'py' + format, path + 'ny' + format,
-					path + 'pz' + format, path + 'nz' + format
-				];
+      camera = new THREE.PerspectiveCamera(50, 16 / 9, 1, 10000);
+      camera.position.y = 300;
 
-				const textureCube = new THREE.CubeTextureLoader().load( urls );
+      scene = new THREE.Scene();
+      scene.background = new THREE.Color(0xffffff);
 
-				scene = new THREE.Scene();
-				scene.background = textureCube;
+      const light1 = new THREE.DirectionalLight(0xefefff, 5);
+      light1.position.set(1, 1, 1).normalize();
+      scene.add(light1);
 
-				const geometry = new THREE.SphereGeometry( 0.1, 32, 16 );
-				const material = new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: textureCube } );
+      const light2 = new THREE.DirectionalLight(0xffefef, 5);
+      light2.position.set(-1, -1, -1).normalize();
+      scene.add(light2);
 
-				for ( let i = 0; i < 500; i ++ ) {
+      const loader = new GLTFLoader();
+      loader.load('/250408/models/gltf/Horse.glb', function (gltf) {
+        mesh = gltf.scene.children[0];
+        mesh.scale.set(1.5, 1.5, 1.5);
+        scene.add(mesh);
 
-					const mesh = new THREE.Mesh( geometry, material );
+        mixer = new THREE.AnimationMixer(mesh);
+        mixer.clipAction(gltf.animations[0]).setDuration(1).play();
+      });
 
-					mesh.position.x = Math.random() * 10 - 5;
-					mesh.position.y = Math.random() * 10 - 5;
-					mesh.position.z = Math.random() * 10 - 5;
+      renderer = new THREE.WebGLRenderer({ antialias: true });
+      renderer.setPixelRatio(window.devicePixelRatio);
+      renderer.setSize(container.clientWidth, container.clientHeight);
+      renderer.setAnimationLoop(animate);
+      container.appendChild(renderer.domElement);
 
-					mesh.scale.x = mesh.scale.y = mesh.scale.z = Math.random() * 3 + 1;
+      stats = new Stats();
+      container.appendChild(stats.dom);
 
-					scene.add( mesh );
+      window.addEventListener('resize', onWindowResize);
+    }
 
-					spheres.push( mesh );
+    function onWindowResize() {
+      const width = container.clientWidth;
+      const height = container.clientHeight;
 
-				}
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
 
-				//
+      renderer.setSize(width, height);
+    }
 
-				renderer = new THREE.WebGLRenderer();
-				renderer.setPixelRatio( window.devicePixelRatio );
-				renderer.setAnimationLoop( animate );
-				container.appendChild( renderer.domElement );
+    function animate() {
+      render();
+      stats.update();
+    }
 
-				const width = window.innerWidth || 2;
-				const height = window.innerHeight || 2;
+    function render() {
+      theta += 0.1;
 
-				effect = new AnaglyphEffect( renderer );
-				effect.setSize( width, height );
+      camera.position.x = radius * Math.sin(THREE.MathUtils.degToRad(theta));
+      camera.position.z = radius * Math.cos(THREE.MathUtils.degToRad(theta));
+      camera.lookAt(0, 150, 0);
 
-				//
+      if (mixer) {
+        const time = Date.now();
+        mixer.update((time - prevTime) * 0.001);
+        prevTime = time;
+      }
 
-				window.addEventListener( 'resize', onWindowResize );
-
-			}
-
-			function onWindowResize() {
-
-				windowHalfX = window.innerWidth / 2;
-				windowHalfY = window.innerHeight / 2;
-
-				camera.aspect = window.innerWidth / window.innerHeight;
-				camera.updateProjectionMatrix();
-
-				effect.setSize( window.innerWidth, window.innerHeight );
-
-			}
-
-			function onDocumentMouseMove( event ) {
-
-				mouseX = ( event.clientX - windowHalfX ) / 100;
-				mouseY = ( event.clientY - windowHalfY ) / 100;
-
-			}
-
-			//
-
-			function animate() {
-
-				render();
-
-			}
-
-			function render() {
-
-				const timer = 0.0001 * Date.now();
-
-				camera.position.x += ( mouseX - camera.position.x ) * .05;
-				camera.position.y += ( - mouseY - camera.position.y ) * .05;
-
-				camera.lookAt( scene.position );
-
-				for ( let i = 0, il = spheres.length; i < il; i ++ ) {
-
-					const sphere = spheres[ i ];
-
-					sphere.position.x = 5 * Math.cos( timer + i );
-					sphere.position.y = 5 * Math.sin( timer + i * 1.1 );
-
-				}
-
-				effect.render( scene, camera );
-
-			}
-
-		</script>
-
+      renderer.render(scene, camera);
+    }
+  </script>
 </body>
 </html>
