@@ -1,7 +1,7 @@
 ---
-title: JavaScript Ecology Libraries, Packages, & Modules
+title: Three.js
 published_at: 2025-04-04
-snippet: Week 5a
+snippet: Week 5b
 disable_html_sanitization: true
 allow_math: true
 ---
@@ -163,3 +163,9 @@ allow_math: true
   </script>
 </body>
 </html>
+
+Sabato Visconti's artworks convey a sense of distortion, transforming a beautiful flower into a chaotic, unrecognizable shape. This exemplifies post-digital art, where the real and surreal collide, challenging our perception of reality. Rather than presenting the true form of the flower, the artwork immerses it in a false reality, making it difficult to recognize its original beauty.
+
+Under the hood Sabato Visconti utilises the function ‘sin’ to create sinusoids to render the Under the hood, Sabato Visconti uses the ‘sin’ function to generate sinusoids, which introduces rhythmic, wave-like distortions to the image data. These calculated distortions warp the polygons, bending and merging them into a rotational polynormal—an abstract, fluid form that resists traditional geometry. The result is a digital mutation, where structure and chaos blend, echoing the tension between organic beauty and algorithmic manipulation.
+
+<div style="height: 100px;"></div>

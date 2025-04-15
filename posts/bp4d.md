@@ -1,7 +1,7 @@
 ---
 title: Faller p5.js
 published_at: 2025-04-02
-snippet: Week 4b
+snippet: In class
 disable_html_sanitization: true
 allow_math: true
 ---

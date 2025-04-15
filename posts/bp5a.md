@@ -1,7 +1,7 @@
 ---
 title: Experimenting with 3D.js
 published_at: 2025-04-03
-snippet: Week 5a
+snippet: class experiment
 disable_html_sanitization: true
 allow_math: true
 ---
