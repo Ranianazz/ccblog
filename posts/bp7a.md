@@ -292,6 +292,4 @@ Mozilla Developer Network. (n.d.). CSS Transitions. MDN Web Docs. Retrieved May 
 
 Mozilla Developer Network. (n.d.). :hover. MDN Web Docs. Retrieved May 3, 2025, from https://developer.mozilla.org/en-US/docs/Web/CSS/:hover
 
-Mozilla Developer Network. (n.d.). requestAnimationFrame. MDN Web Docs. Retrieved May 3, 2025, from https://developer.mozilla.org/en-US/docs/Web/API/requestAnimationFrame
-
 <div style="height: 100px;"></div>
