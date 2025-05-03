@@ -1,7 +1,7 @@
 ---
-title: Web Audio API & Responding to Text.
-published_at: 2025-04-17
-snippet: Week 7a
+title: Chaos & Dysfunction - Revisiting Interaction
+published_at: 2025-04-25
+snippet: Week 7b
 disable_html_sanitization: true
 allow_math: true
 ---
