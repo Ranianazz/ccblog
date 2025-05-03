@@ -126,3 +126,13 @@ This function calls itself with a delay, giving the feeling of an organic, growi
 I chose the sound of an earthquake because it complements the visual theme of jiggling jelly. Rather than using a literal or calm sound, I leaned into chaos as a creative principle. Inspired by What Is It Like to Be A Fungus?, I imagined fungi as not just passive decomposers but as powerful, disruptive forces hidden under the surface—like earthquakes.
 
 The jellies jiggle as if reacting to an unseen tremor. The earthquake sound makes the invisible tension audible. It reminds us that fungi and mycelium networks can be subtle or destructive, shaping ecosystems in unpredictable ways. The chaotic aesthetic aligns with this theme.
+
+# How the Work Responds to the Chosen Text
+
+This piece responds to What Is It Like to Be A Fungus? by Merlin Sheldrake through a visual and sonic interpretation of fungal life. The jelly forms represent fungal bodies, connected by a dynamic web — a reference to the “wood-wide web” Sheldrake describes. As these jelly-fungi jiggle and grow, they mimic the unpredictable and hidden rhythms of fungal networks.
+
+The earthquake sound enhances this concept, suggesting a powerful but unseen force shaking the environment. Just as fungi operate beneath the surface, shaping entire ecosystems, the sound makes the invisible energy behind the movement of the jelly feel present and real. This sonic addition gives meaning to the jiggling — turning a random motion into a narrative force that supports the ecological themes of the text.
+
+# Why the Work Is Post-Digital
+
+This project is post-digital in its use of code and interaction to explore organic, living systems. Inspired by post-digital artist Jess Herrington, whose work often explores squishy, surreal, and bodily forms through digital media, I used jelly-like geometry and soft motion to evoke a living, semi-physical quality. The work embraces imperfection, randomness, and touch-like visuals, rather than clean, machine-like aesthetics.
