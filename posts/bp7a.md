@@ -292,4 +292,6 @@ Mozilla Developer Network. (n.d.). CSS Transitions. MDN Web Docs. Retrieved May 
 
 Mozilla Developer Network. (n.d.). :hover. MDN Web Docs. Retrieved May 3, 2025, from https://developer.mozilla.org/en-US/docs/Web/CSS/:hover
 
+OpenAI. (2023). ChatGPT (Mar 14 version) [Large language model]. https://chat.openai.com/
+
 <div style="height: 100px;"></div>
