@@ -61,7 +61,7 @@ De-familiarisation, as described by Natalie Loveless, is about making the famili
 
       audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
-      const response = await fetch('rumble.mp3');
+      const response = await fetch('waterdrip.mp3');
       const arrayBuffer = await response.arrayBuffer();
       const audioBuffer = await audioCtx.decodeAudioData(arrayBuffer);
 
