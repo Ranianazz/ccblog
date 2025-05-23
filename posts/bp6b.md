@@ -34,4 +34,15 @@ Additionally, I was inspired by Jess Herrington’s artwork 'Jelly'. Her use of 
 
 I created my sketch using p5.js because I have been learning about it in class, so it felt like the fitting choice. I wanted to include shaders and thought I could make a jelly shader using a vertex shader, but when I made it 3d it looked more like slime. So instead, I used recursion to spawn and re-spawn the jelly at the points of the web. I made a function that calls itself to keep creating smaller jelly shapes at different points, which made the web feel more alive and random, kind of like how fungi actually grow and spread in real life.
 
+# Feedback from class mates
+
+![alt text](joolie.png)
+
+![alt text](Travv.png)
+
+![alt text](lanchu.png)
+![alt text](L1.png)
+![alt text](l2.png)
+![alt text](l3.png)
+
 <div style="height: 100px;"></div>
