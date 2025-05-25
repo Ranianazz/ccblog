@@ -13,25 +13,22 @@ What do you think is going on, under the hood?
 What concepts would I need to understand in order to replicate this work in p5?
 What resources might help me to learn those concepts?
 
-![alt text](intro-joolie.png)
+## The first person I spoke to was joolie, after I asked her those questions she replied with this.
 
-# The first person I spoke to was joolie, after I asked her those questions she replied with this.
+![alt text](joolie1.png)
+![alt text](joolie2.png)
 
-![alt text](convo.png)
-![alt text](convo2.png)
-...
+## The second person I spoke to was Travv.
 
-# The second person I spoke to was Travv.
+![alt text](Travv1.png)
+![alt text](Travv2.png)
+![alt text](travv3.png)
 
-![alt text](<travv intro.png>)
-![alt text](<travv convo 2.png>)
-![alt text](Travv-convo-3.png)
+## The third person was Lanchu Zheng
 
-# The third person was Lanchu Zheng
-
-![alt text](<lanchu convo 1.png>)
-![alt text](<lanchu convo 2.png>)
-![alt text](<lanchu convo 3.png>)
-![alt text](<lanchu convo 4.png>)
+![alt text](lanchu1.png)
+![alt text](lanchu2.png)
+![alt text](lanchu3.png)
+![alt text](lanchu4.png)
 
 <div style="height: 100px;"></div>

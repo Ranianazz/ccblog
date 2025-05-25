@@ -24,8 +24,8 @@ For interactivity, I will implement a bounce function that allows my adorable Pi
 
 # Feedback from classmates
 
-![alt text](feedback-travv.png)
+![alt text](Travv_feedback.png)
 
-![alt text](feedback-joolie.png)
+![alt text](Joolie_feedback.png)
 
 <div style="height: 100px;"></div>

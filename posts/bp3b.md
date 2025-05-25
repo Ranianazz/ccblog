@@ -44,7 +44,7 @@ Since my sketch did not require a class, I did not use any for this project.
 
 # Feedback
 
-![alt text](joolie-feedback.png)
+![alt text](Joolie-feedback.png)
 
 # Refrences
 

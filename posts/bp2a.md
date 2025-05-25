@@ -24,7 +24,7 @@ My interpretation of cuteness often resembles big, round eyes that sparkle. Afte
 
 As a huge Pokémon fan, I noticed that their cute aesthetic breaks away from traditional norms because they use bright colours. In my p5.js sketch, I will also incorporate bright colours, as I believe that something can be both cute and exciting at the same time. Therefore, my sketch will feature round objects that bounce around the screen, embodying both cuteness and excitement.
 
-<video controls src="/giggle.ogg" title="Title"></video>
+<audio controls src="/baby-giggle.mp3"></audio>
 
 When considering sound elements that align with a cute aesthetic, it's effective to incorporate soft or subtle tones. Sounds such as children's giggles or gentle music can complement this theme beautifully, enhancing the overall ambiance and evoking a sense of warmth and playfulness. In my sketch, I plan to incorporate children's giggles to add to the cute aesthetic.
 
